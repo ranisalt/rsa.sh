@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
-function Index() {
-  const [date, setDate] = useState(null);
+const Index = () => {
+  const [date, setDate] = useState<string | null>(null);
   useEffect(() => {
     async function getDate() {
       const res = await fetch('/api/date');

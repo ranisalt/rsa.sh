@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Helmet } from "react-helmet";
+import "../styles/index.css";
 
 const Container = styled.div`
   align-items: center;
@@ -23,12 +23,13 @@ const Hero = styled.div`
   }
 
   & h1 {
+    font-size: 2em;
     font-weight: 600;
+    margin: 0.75em 0 0.5rem;
   }
 
   & a {
     color: #0076ff;
-    text-decoration: none;
   }
 `;
 
@@ -52,7 +53,6 @@ const SocialNetworks = styled.ul`
     display: flex;
     padding: 0.5rem 1rem 0.5rem 0.5rem;
     opacity: 0.5;
-    text-decoration: none;
     transition: all 0.15s;
   }
 
@@ -68,16 +68,6 @@ const SocialNetworks = styled.ul`
 
 const Index = () => (
   <Container>
-    <Helmet>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossOrigin="anonymous"
-        referrerPolicy="no-referrer"
-      />
-    </Helmet>
-
     <Hero>
       <img
         src="http://placekitten.com/300/300"

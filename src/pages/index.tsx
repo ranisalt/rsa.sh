@@ -1,8 +1,24 @@
+import styled from '@emotion/styled';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
+const Main = styled.main`
+  align-content: center;
+  box-sizing: border-box;
+  display: grid;
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
+    'Arial', sans-serif;
+  hyphens: auto;
+  line-height: 1.65;
+  margin: 0 auto;
+  max-width: 680px;
+  min-height: 100vh;
+  padding: 72px 0;
+  text-align: center;
+`;
+
 const Index = () => (
-  <main>
+  <Main>
     <Helmet>
       <title>Gatsby + Node.js (TypeScript) API</title>
     </Helmet>
@@ -35,7 +51,7 @@ const Index = () => (
       </a>
       .
     </p>
-  </main>
+  </Main>
 );
 
 export default Index;

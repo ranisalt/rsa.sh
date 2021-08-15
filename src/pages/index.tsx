@@ -68,6 +68,33 @@ const SocialNetworks = styled.ul`
   }
 `;
 
+const NotableWorks = styled.div`
+  & .entry {
+    padding: 1rem 0;
+  }
+
+  & .entry + .entry {
+    border-top: 1px solid lightgray;
+  }
+
+  & .title {
+    font-weight: semibold;
+  }
+
+  & .header + .description {
+    margin-top: 0.5rem;
+  }
+
+  & .role {
+    background-color: lightgray;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    margin-inline-start: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+  }
+`;
+
 const Index = () => (
   <Container>
     <Helmet>
@@ -111,6 +138,46 @@ const Index = () => (
         </a>
       </li>
     </SocialNetworks>
+
+    <NotableWorks>
+      <article className="entry">
+        <header className="header">
+          <a
+            className="title"
+            href="https://github.com/ranisalt/node-argon2"
+            target="_blank"
+            rel="noopener"
+          >
+            {"node-argon2"}
+          </a>
+
+          <span className="role">{"author"}</span>
+        </header>
+
+        <div className="description">
+          {"Node.js bindings for Argon2 hashing algorithm."}
+        </div>
+      </article>
+
+      <article className="entry">
+        <header className="header">
+          <a
+            className="title"
+            href="https://github.com/otland/forgottenserver"
+            target="_blank"
+            rel="noopener"
+          >
+            {"otland/forgottenserver"}
+          </a>
+
+          <span className="role">{"maintainer"}</span>
+        </header>
+
+        <div className="description">
+          {"A free and open-source MMORPG server emulator written in C++."}
+        </div>
+      </article>
+    </NotableWorks>
   </Container>
 );
 

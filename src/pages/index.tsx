@@ -97,8 +97,14 @@ const NotableWorks = styled.div`
 
 const Index = () => (
   <Container>
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: "en" }}>
       <title>ranieri - rsa.sh</title>
+      <meta
+        name="description"
+        content={
+          "Experienced software engineer with a demonstrated history of working in the computer software industry,  with a bachelor's degree focused in Computer Science. Skilled in C++, Javascript, Python, and Linux."
+        }
+      />
     </Helmet>
 
     <Hero>

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Helmet } from "react-helmet";
 import * as Icons from "../components/Icons";
 import "../styles/index.css";
 
@@ -69,6 +70,10 @@ const SocialNetworks = styled.ul`
 
 const Index = () => (
   <Container>
+    <Helmet>
+      <title>ranieri - rsa.sh</title>
+    </Helmet>
+
     <Hero>
       <img
         src="http://placekitten.com/300/300"

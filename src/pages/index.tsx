@@ -75,6 +75,7 @@ const Index = () => (
         height={300}
         width={300}
         alt="kitten"
+        loading="lazy"
       />
 
       <h1>{"Ranieri Althoff"}</h1>

@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { Helmet } from "react-helmet";
-import * as Icons from "../components/Icons";
+import { meta, social, works } from "../config";
 import "../styles/index.css";
 
 const Container = styled.div`
@@ -98,13 +98,10 @@ const NotableWorks = styled.div`
 const Index = () => (
   <Container>
     <Helmet htmlAttributes={{ lang: "en" }}>
-      <title>ranieri - rsa.sh</title>
-      <meta
-        name="description"
-        content={
-          "Experienced software engineer with a demonstrated history of working in the computer software industry,  with a bachelor's degree focused in Computer Science. Skilled in C++, Javascript, Python, and Linux."
-        }
-      />
+      <title>{meta.title}</title>
+      {Object.entries(meta.tags).map(([name, content]) => (
+        <meta name={name} content={content} />
+      ))}
     </Helmet>
 
     <Hero>
@@ -126,63 +123,30 @@ const Index = () => (
     </Hero>
 
     <SocialNetworks>
-      <li>
-        <a href="https://github.com/ranisalt" target="_blank" rel="noopener">
-          <Icons.GitHub />
-          <span>{"GitHub"}</span>
-        </a>
-      </li>
-
-      <li>
-        <a
-          href="https://www.linkedin.com/in/ranisalt"
-          target="_blank"
-          rel="noopener"
-        >
-          <Icons.LinkedIn />
-          <span>{"LinkedIn"}</span>
-        </a>
-      </li>
+      {social.map(({ name, url, icon: Icon }) => (
+        <li key={url}>
+          <a href={url} target="_blank" rel="noopener">
+            <Icon />
+            <span>{name}</span>
+          </a>
+        </li>
+      ))}
     </SocialNetworks>
 
     <NotableWorks>
-      <article className="entry">
-        <header className="header">
-          <a
-            className="title"
-            href="https://github.com/ranisalt/node-argon2"
-            target="_blank"
-            rel="noopener"
-          >
-            {"node-argon2"}
-          </a>
+      {works.map(({ name, url, description, role }) => (
+        <article key={url} className="entry">
+          <header className="header">
+            <a className="title" href={url} target="_blank" rel="noopener">
+              {name}
+            </a>
 
-          <span className="role">{"author"}</span>
-        </header>
+            {role && <span className="role">{role}</span>}
+          </header>
 
-        <div className="description">
-          {"Node.js bindings for Argon2 hashing algorithm."}
-        </div>
-      </article>
-
-      <article className="entry">
-        <header className="header">
-          <a
-            className="title"
-            href="https://github.com/otland/forgottenserver"
-            target="_blank"
-            rel="noopener"
-          >
-            {"otland/forgottenserver"}
-          </a>
-
-          <span className="role">{"maintainer"}</span>
-        </header>
-
-        <div className="description">
-          {"A free and open-source MMORPG server emulator written in C++."}
-        </div>
-      </article>
+          <div className="description">{description}</div>
+        </article>
+      ))}
     </NotableWorks>
   </Container>
 );

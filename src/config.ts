@@ -6,6 +6,8 @@ export const meta = {
     description:
       "Experienced software engineer with a demonstrated history of working in the computer software industry,  with a bachelor's degree focused in Computer Science. Skilled in C++, Javascript, Python, and Linux.",
   },
+  heroTitle: "Ranieri Althoff",
+  heroImage: "https://avatars.githubusercontent.com/u/1993083",
 } as const;
 
 export const social = [

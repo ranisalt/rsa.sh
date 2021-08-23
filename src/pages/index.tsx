@@ -105,15 +105,9 @@ const Index = () => (
     </Helmet>
 
     <Hero>
-      <img
-        src="http://placekitten.com/300/300"
-        height={300}
-        width={300}
-        alt="kitten"
-        loading="lazy"
-      />
+      <img src={meta.heroImage} height={300} width={300} loading="lazy" />
 
-      <h1>{"Ranieri Althoff"}</h1>
+      <h1>{meta.heroTitle}</h1>
       <p>
         <span>{"Web developer at"}</span>{" "}
         <a href="https://doctype.se" target="_blank" rel="noopener">

@@ -109,9 +109,9 @@ const Index = () => (
 
       <h1>{meta.heroTitle}</h1>
       <p>
-        <span>{"Web developer at"}</span>{" "}
-        <a href="https://doctype.se" target="_blank" rel="noopener">
-          {"Doctype"}
+        <span>{"Engineer at"}</span>{" "}
+        <a href="https://klarna.com" target="_blank" rel="noopener">
+          {"Klarna"}
         </a>
       </p>
     </Hero>

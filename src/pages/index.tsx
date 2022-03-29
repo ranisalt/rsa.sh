@@ -105,7 +105,7 @@ const Index = () => (
     </Helmet>
 
     <Hero>
-      <img src={meta.heroImage} height={300} width={300} loading="lazy" />
+      <img src={meta.heroImage} height={300} width={300} />
 
       <h1>{meta.heroTitle}</h1>
       <p>

@@ -5134,6 +5134,11 @@ gatsby-plugin-manifest@^4.6.0:
     semver "^7.3.5"
     sharp "^0.30.1"
 
+gatsby-plugin-no-javascript-utils@^0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-javascript-utils/-/gatsby-plugin-no-javascript-utils-0.9.0.tgz#5e5703494d873d9494d34513524dae8b13b59ba3"
+  integrity sha512-H4ZjHrN3GI72U6tWxU+PXQz3Ru7wcqlQAQWK4dzVi5AhUNuCnK8YzjC2hygFrcZCUHr7AVjT9UneDh5ZIrAeNA==
+
 gatsby-plugin-page-creator@^4.10.2:
   version "4.10.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-4.10.2.tgz#05e6e3b0bdf800a4358573768987ed73d50eb158"

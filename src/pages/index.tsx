@@ -108,12 +108,6 @@ const Index = () => (
       <img src={meta.heroImage} height={300} width={300} />
 
       <h1>{meta.heroTitle}</h1>
-      <p>
-        <span>{"Engineer at"}</span>{" "}
-        <a href="https://klarna.com" target="_blank" rel="noopener">
-          {"Klarna"}
-        </a>
-      </p>
     </Hero>
 
     <SocialNetworks>
